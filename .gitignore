@@ -1,0 +1,28 @@
+# Vivado simulation files
+*.jou
+*.log
+*.pb
+*.backup.log
+webtalk_*
+xelab.log
+xsim.dir/
+xvlog.log
+*.wdb
+
+# VCD files (optional - uncomment if you don't want to track waveforms)
+# *.vcd
+
+# Vivado project files
+*.xpr
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+
+# VS Code settings (optional)
+.vscode/settings.json
+
+# OS files
+.DS_Store
+Thumbs.db

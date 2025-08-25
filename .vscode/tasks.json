@@ -1,0 +1,85 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Vivado: Compile All SystemVerilog",
+            "type": "shell",
+            "command": "xvlog -sv src/*.sv testbenches/*.sv",
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Compile all SystemVerilog files (src and testbenches)."
+        },
+        {
+            "label": "PC: Compile and Elaborate",
+            "type": "shell",
+            "command": "xvlog -sv src/pc.sv testbenches/pc_tb.sv && xelab work.program_counter_tb",
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Compile PC design and testbench from different folders, then elaborate."
+        },
+        {
+            "label": "PC: Run Simulation (GUI)",
+            "type": "shell",
+            "command": "xsim work.program_counter_tb -gui",
+            "group": "test",
+            "problemMatcher": [],
+            "detail": "Run PC simulation with waveform viewer."
+        },
+        {
+            "label": "PC: Run Simulation (Console)",
+            "type": "shell",
+            "command": "xsim work.program_counter_tb -runall",
+            "group": "test",
+            "problemMatcher": [],
+            "detail": "Run PC simulation in console mode."
+        },
+        {
+            "label": "PC: Generate Waveforms + GTKWave",
+            "type": "shell",
+            "command": "xsim work.program_counter_tb -runall && gtkwave pc_simulation.vcd",
+            "group": "test",
+            "problemMatcher": [],
+            "detail": "Run PC simulation and open GTKWave to view waveforms."
+        },
+        {
+            "label": "ALU: Compile and Elaborate",
+            "type": "shell",
+            "command": "xvlog -sv src/alu.sv testbenches/alu_tb.sv && xelab work.alu_tb",
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Compile ALU design and testbench, then elaborate."
+        },
+        {
+            "label": "ALU: Run Simulation (Console)",
+            "type": "shell",
+            "command": "xsim work.alu_tb -runall",
+            "group": "test",
+            "problemMatcher": [],
+            "detail": "Run ALU simulation in console mode."
+        },
+        {
+            "label": "ALU: Run Simulation (GUI)",
+            "type": "shell",
+            "command": "xsim work.alu_tb -gui",
+            "group": "test",
+            "problemMatcher": [],
+            "detail": "Run ALU simulation with Vivado's waveform viewer."
+        },
+        {
+            "label": "Vivado: Elaborate Design",
+            "type": "shell",
+            "command": "xelab work.tb_top",
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Elaborate the testbench (replace tb_top with your testbench module name)."
+        },
+        {
+            "label": "Vivado: Run Simulation",
+            "type": "shell",
+            "command": "xsim work.tb_top -gui",
+            "group": "test",
+            "problemMatcher": [],
+            "detail": "Run simulation and open Vivado's waveform viewer (replace tb_top with your testbench module name)."
+        }
+    ]
+}
