@@ -1,0 +1,10 @@
+# Simple arithmetic test
+r1 = memory[0] #
+r2 = memory[1]
+r3 = r1 + r2
+r4 = r1 - r2
+r5 = r1 & r2
+r6 = r1 | r2
+r7 = r1 < r2
+memory[2] = r3
+memory[3] = r4

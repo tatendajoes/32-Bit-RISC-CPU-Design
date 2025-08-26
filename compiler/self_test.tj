@@ -1,0 +1,21 @@
+# Self-initializing TJ program
+# Initialize test data and run computations
+
+# First set up test values using immediate loads (simulated with memory)
+memory[16] = r0 + r0   # Store 0 to memory[16] (dummy for now)
+memory[20] = r0 + r0   # Store 0 to memory[20] (dummy for now)
+
+# Load test values from predefined memory locations
+r2 = memory[0]    # r2 = memory[0] (we'll preset this to 5)
+r3 = memory[4]    # r3 = memory[4] (we'll preset this to 3)
+
+# Now run the arithmetic operations
+r1 = r2 + r3    # ADD: r1 = r2 + r3 = 5 + 3 = 8
+r4 = r1 - r2    # SUB: r4 = r1 - r2 = 8 - 5 = 3  
+r5 = r1 & r2    # AND: r5 = r1 & r2 = 8 & 5 = 0
+r6 = r1 | r2    # OR:  r6 = r1 | r2 = 8 | 5 = 13
+r7 = r1 < r2    # SLT: r7 = r1 < r2 = 8 < 5 = 0
+
+# Store results back to memory
+memory[8] = r1    # Store result r1 = 8
+memory[12] = r4   # Store result r4 = 3

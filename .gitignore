@@ -12,6 +12,9 @@ xvlog.log
 # VCD files 
  *.vcd
 
+# Personal reference files
+PERSONAL_README.md
+
 # Vivado project files
 *.xpr
 *.cache/

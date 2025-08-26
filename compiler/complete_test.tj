@@ -1,0 +1,18 @@
+# Complete test program in TJ language
+# This program demonstrates all supported operations
+
+# Arithmetic operations
+r1 = r2 + r3    # ADD: r1 = r2 + r3
+r4 = r1 - r2    # SUB: r4 = r1 - r2  
+r5 = r1 & r2    # AND: r5 = r1 & r2
+r6 = r1 | r2    # OR:  r6 = r1 | r2
+r7 = r1 < r2    # SLT: r7 = 1 if r1 < r2, else 0
+
+# Memory operations
+memory[0] = r1   # STORE: Save r1 to memory address 0
+memory[4] = r4   # STORE: Save r4 to memory address 4
+r8 = memory[0]   # LOAD:  Load from memory address 0 to r8
+r9 = memory[4]   # LOAD:  Load from memory address 4 to r9
+
+# Branch operation (simple test)
+if r1 == r2:     # BEQ: Branch if r1 equals r2
