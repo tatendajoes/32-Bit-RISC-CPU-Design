@@ -9,8 +9,8 @@ xsim.dir/
 xvlog.log
 *.wdb
 
-# VCD files (optional - uncomment if you don't want to track waveforms)
-# *.vcd
+# VCD files 
+ *.vcd
 
 # Vivado project files
 *.xpr
@@ -20,7 +20,7 @@ xvlog.log
 *.runs/
 *.sim/
 
-# VS Code settings (optional)
+# VS Code settings 
 .vscode/settings.json
 
 # OS files
