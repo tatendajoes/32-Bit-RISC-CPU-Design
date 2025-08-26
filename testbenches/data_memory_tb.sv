@@ -1,5 +1,4 @@
 `timescale 1ns / 1ps
-
 module data_memory_tb;
   // Testbench signals
   reg         clk;
@@ -24,7 +23,7 @@ module data_memory_tb;
   always #5 clk = ~clk;
 
   initial begin
-    // Generate VCD file for waveform viewing (FIRST!)
+    // Generate VCD file for waveform viewing
     $dumpfile("data_memory_tb.vcd");
     $dumpvars;
     

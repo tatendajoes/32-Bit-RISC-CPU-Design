@@ -9,7 +9,7 @@ module program_counter
   
   always @(posedge clk or negedge rst)
     begin
-      if (~rst)
+      if (~rst)          // Reset when rst is low (active-low reset)
         pc <= 32'b0;
       else if (pc >= 32'd1020) // Memory overflow protection
         pc <= 32'b0;
